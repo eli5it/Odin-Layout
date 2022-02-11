@@ -122,6 +122,14 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+:root {
+  --sidebar-color: #7dd3fc;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
 
 .grid-container {
   display: grid;
@@ -132,13 +140,22 @@ table {
 
 .sidebar {
   grid-row: 1/3;
-  background-color: red;
+  background-color: var(--sidebar-color);
+  display: grid;
+  grid-template-rows: 1fr 3fr 2fr 4fr;
 }
-.header {
+div[class^="flex-container"] {
+  display: flex;
+  flex-direction: column;
+  padding-left: 15%;
+  justify-content: space-around;
+}
+
+header {
   grid-column: 2/4;
   background-color: goldenrod;
 }
-.main {
+main {
   display: grid;
   background-color: blue;
   grid-column: 2/4;
