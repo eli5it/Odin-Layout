@@ -124,11 +124,21 @@ table {
 }
 :root {
   --sidebar-color: #7dd3fc;
+  --roboto-family: "Roboto", sans-serif;
+  --new-pink: #fecaca;
+  --slate: #f8fafc;
 }
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 
+* {
+  font-family: var(--roboto-family);
+}
 a {
   text-decoration: none;
+}
+.sidebar a {
   color: white;
+  font-weight: 600;
 }
 
 .grid-container {
@@ -141,22 +151,74 @@ a {
 .sidebar {
   grid-row: 1/3;
   background-color: var(--sidebar-color);
-  display: grid;
-  grid-template-rows: 1fr 3fr 2fr 4fr;
+  display: flex;
+  flex-direction: column;
+
+  color: white;
+  font-weight: 700;
 }
 div[class^="flex-container"] {
   display: flex;
   flex-direction: column;
   padding-left: 15%;
+}
+.flex-container1 {
+  height: 10%;
+  justify-content: center;
+}
+.flex-container2 {
+  margin: 20% 0 20% 0;
+  height: 30%;
+  justify-content: space-around;
+}
+.flex-container3 {
+  height: 15%;
   justify-content: space-around;
 }
 
 header {
   grid-column: 2/4;
-  background-color: goldenrod;
+  background-color: var(--slate);
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 7fr 3fr;
+  padding-left: 5%;
+  padding-right: 5%;
 }
+header > div {
+  display: flex;
+}
+header a {
+  color: black;
+}
+.top-right img {
+  height: 3rem;
+}
+.empty-profile {
+  height: 5rem;
+}
+.button-container {
+  display: flex;
+  justify-content: space-around;
+}
+.header-button {
+  border-radius: 10%;
+  background-color: var(--sidebar-color);
+  width: 28%;
+  height: 50%;
+}
+
 main {
   display: grid;
   background-color: blue;
   grid-column: 2/4;
+  background-color: var(--new-pink);
+}
+.card {
+  display: flex;
+  flex-direction: column;
+}
+.card-icons {
+  align-self: flex-end;
+  display: flex;
 }
