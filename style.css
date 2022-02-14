@@ -143,7 +143,7 @@ a {
 
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr 5fr;
+  grid-template-columns: 1.2fr 5fr;
   grid-template-rows: 1fr 4fr;
   height: 100vh;
 }
@@ -181,7 +181,7 @@ header {
   background-color: var(--slate);
   display: grid;
   grid-template-rows: 1fr 1fr;
-  grid-template-columns: 7fr 3fr;
+  grid-template-columns: 6fr 3fr;
   padding-left: 5%;
   padding-right: 5%;
 }
@@ -210,15 +210,89 @@ header a {
 
 main {
   display: grid;
+  grid-template-columns: 7fr 2fr;
+  grid-template-rows: 1fr 9fr;
   background-color: blue;
   grid-column: 2/4;
   background-color: var(--new-pink);
 }
+.card-container {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
 .card {
-  display: flex;
-  flex-direction: column;
+  background-color: white;
+  margin: 20px;
+  border-radius: 3%;
+  padding: 8%;
+  display: grid;
+  grid-template-rows: 1fr 5fr 1fr;
+}
+.card > h3 {
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 8%;
+}
+.star-image {
+  content: url(assets/star-plus-outline.svg);
+}
+.eye-image {
+  content: url(assets/eye-plus-outline.svg);
+}
+.share-image {
+  content: url(assets/share-variant-outline.svg);
 }
 .card-icons {
   align-self: flex-end;
+  width: 40%;
+  justify-self: flex-end;
+}
+.main-sidebar {
+  display: grid;
+  grid-template-rows: 4fr 1fr 4fr 1fr;
+  padding: 5%;
+}
+.announcement-header {
+  padding: 5%;
   display: flex;
+  align-items: flex-end;
+}
+.trending-header {
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 10%;
+}
+.main-sidebar > div {
+  background-color: white;
+  border-radius: 3%;
+  padding: 8%;
+  border-bottom: black;
+}
+.main-sidebar h4 {
+  font-weight: 600;
+}
+.main-sidebar article {
+  font-size: 0.67em;
+}
+.trending-container,
+.announcement-container {
+  display: flex;
+  flex-direction: column;
+}
+.trending-content,
+.announcement-content {
+  flex: 1;
+}
+img[class^="sidebar-image"] {
+  margin-right: 5px;
+  content: url(assets/account-circle-outline.svg);
+  margin-right: 5%;
+}
+.trending-content {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
 }
